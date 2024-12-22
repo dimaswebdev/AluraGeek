@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraGeek</title>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>AluraGeek</h1>
+  </header>
+  <main>
+    <section class="product-list">
+      <h2>Produtos</h2>
+      <div id="products-container">
+        <!-- Os produtos serão carregados dinamicamente aqui -->
+      </div>
+    </section>
+    <section class="add-product">
+      <h2>Adicionar Produto</h2>
+      <form id="product-form">
+        <input type="text" id="product-name" placeholder="Nome do Produto" required>
+        <input type="number" id="product-price" placeholder="Preço" required step="0.01">
+        <input type="url" id="product-image" placeholder="URL da Imagem" required>
+        
+
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+  </main>
+  <script src="js/controllers/main.js"></script>
+
+</body>
+</html>
