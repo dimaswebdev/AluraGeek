@@ -1,13 +1,13 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Camiseta Geek",
       "price": "49.90",
       "image": "https://via.placeholder.com/150"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Caneca Alura",
       "price": "19.90",
       "image": "https://via.placeholder.com/150"
