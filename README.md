@@ -1,5 +1,7 @@
 # AluraGeek
 
+![AluraGeek](./img/AluraGeek%20-%20page.jpg)
+
 **AluraGeek** é uma aplicação web para gerenciar produtos de uma loja geek fictícia. Os usuários podem adicionar, visualizar e excluir produtos dinamicamente.
 
 ## 🔥 Funcionalidades
