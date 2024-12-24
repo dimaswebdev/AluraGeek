@@ -2,20 +2,146 @@
   "products": [
     {
       "id": "1",
-      "name": "Camiseta Geek",
+      "name": "Camiseta Star Wars",
+      "price": "59.90",
+      "image": "./img/starwars-1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Caneca Harry Potter",
+      "price": "29.90",
+      "image": "./img/caneca-harrypotter.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Chaveiro Vingadores",
+      "price": "14.90",
+      "image": "./img/chaveiro-vigadores.jpeg"
+    },
+    {
+      "id": "4",
+      "name": "Poster Senhor dos Anéis",
       "price": "49.90",
       "image": "https://via.placeholder.com/150"
     },
     {
-      "id": "2",
-      "name": "Caneca Alura",
+      "id": "5",
+      "name": "Action Figure Homem-Aranha",
+      "price": "129.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "6",
+      "name": "Camiseta Mario Bros",
+      "price": "69.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "7",
+      "name": "Caneca Batman",
+      "price": "24.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "8",
+      "name": "Almofada Mulher-Maravilha",
+      "price": "39.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "9",
+      "name": "Mousepad Game of Thrones",
+      "price": "34.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "10",
+      "name": "Livro Geek Filosofia",
+      "price": "79.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "11",
+      "name": "Chaveiro Yoda",
       "price": "19.90",
       "image": "https://via.placeholder.com/150"
     },
     {
-      "id": "112f",
-      "name": "camisola",
-      "price": "60.00",
+      "id": "12",
+      "name": "Quadro Geek Pac-Man",
+      "price": "49.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "13",
+      "name": "Boné Pokémon",
+      "price": "44.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "14",
+      "name": "Caderno Geek Stranger Things",
+      "price": "34.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "15",
+      "name": "Adesivo Game Over",
+      "price": "9.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "16",
+      "name": "Luminária Star Trek",
+      "price": "89.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "17",
+      "name": "Carteira Geek Zelda",
+      "price": "59.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "18",
+      "name": "Relógio Harry Potter",
+      "price": "119.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "19",
+      "name": "Camiseta Geek Programação",
+      "price": "64.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "20",
+      "name": "Caneca Marvel",
+      "price": "29.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "21",
+      "name": "Poster Geek Cyberpunk",
+      "price": "49.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "22",
+      "name": "Almofada Totoro",
+      "price": "39.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "23",
+      "name": "Miniatura Iron Man",
+      "price": "149.90",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "24",
+      "name": "Fone de Ouvido Gamer",
+      "price": "199.90",
       "image": "https://via.placeholder.com/150"
     }
   ]
