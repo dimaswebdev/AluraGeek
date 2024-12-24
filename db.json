@@ -11,6 +11,12 @@
       "name": "Caneca Alura",
       "price": "19.90",
       "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "112f",
+      "name": "camisola",
+      "price": "60.00",
+      "image": "https://via.placeholder.com/150"
     }
   ]
 }

@@ -6,31 +6,62 @@
   <title>AluraGeek</title>
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header>
-    <h1>AluraGeek</h1>
+    <div class="header-content">
+      <!-- Logo e Título -->
+      <div class="logo-container">
+        <img src="./img/dimas-logo.png" alt="Logo AluraGeek" class="logo">
+        <h1 class="site-title">AluraGeek</h1>
+      </div>
+      
+      <!-- Barra de Pesquisa -->
+      <div class="search-container">
+        <input type="text" placeholder="O que você procura?" class="search-input">
+        <button class="search-btn">
+          <i class="fas fa-search" title="Pesquisar"></i>
+        </button>
+      </div>
+      
+      <!-- Ícones -->
+      <div class="icons-container">
+        <i class="fas fa-heart" title="Lista de Desejos"></i>
+        <i class="fas fa-shopping-cart" title="Carrinho"></i>
+      </div>
+    </div>
   </header>
+  
+
+  <!-- Conteúdo Principal -->
   <main>
+    <!-- Lista de Produtos -->
     <section class="product-list">
       <h2>Produtos</h2>
       <div id="products-container">
         <!-- Os produtos serão carregados dinamicamente aqui -->
       </div>
     </section>
+
+    <!-- Formulário de Adicionar Produto -->
     <section class="add-product">
       <h2>Adicionar Produto</h2>
       <form id="product-form">
         <input type="text" id="product-name" placeholder="Nome do Produto" required>
         <input type="number" id="product-price" placeholder="Preço" required step="0.01">
         <input type="url" id="product-image" placeholder="URL da Imagem" required>
-        
-
         <button type="submit">Adicionar</button>
       </form>
     </section>
   </main>
-  <script src="js/controllers/main.js"></script>
 
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2024 AluraGeek. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/controllers/main.js"></script>
 </body>
 </html>

@@ -1,100 +1,244 @@
-header {
-    background-color: #007BFF;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-  }
-  
-  h1, h2 {
-    margin-bottom: 1rem;
-  }
-  
-  .product-list, .add-product {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  form input, form button {
-    margin-bottom: 1rem;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  form button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #0056b3;
-  }
-  .product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-    padding: 1rem;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .product h3 {
-    margin: 0.5rem 0;
-  }
-  
-  .product p {
-    color: #007BFF;
-    font-weight: bold;
-  }
-  
-  .product .delete-btn {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .product .delete-btn:hover {
-    background-color: #c82333;
-  }
+/* Paleta de Cores */
+:root {
+  --primary-color: #8200FF; /* Cor principal */
+  --secondary-color: #6900CC; /* Cor secundária */
+  --danger-color: #dc3545; /* Cor de alerta */
+  --danger-hover: #c82333; /* Cor de alerta ao passar o mouse */
+  --text-color: #FFFFFF; /* Texto claro */
+  --background-color: #F4F4F4; /* Fundo suave */
+  --card-shadow: rgba(0, 0, 0, 0.1); /* Sombra */
+}
 
-  #products-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .product {
-    flex: 1 1 calc(33.333% - 1rem);
-    max-width: calc(33.333% - 1rem);
-  }
-  
+/* Estilos Globais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+h1, h2 {
+  color: var(--primary-color);
+
+}
+
+
+/* Cabeçalho */
+/* Cabeçalho */
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  height: 79px; /* Altura fixa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Conteúdo do cabeçalho */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  padding: 0 1rem;
+}
+
+/* Logo e Título */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5rem;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+/* Barra de Pesquisa */
+.search-container {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Expande para ocupar espaço no meio */
+  margin: 0 1rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.search-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-btn i {
+  font-size: 1.2rem;
+}
+
+.search-btn:hover {
+  background-color: #6700CC; /* Tom mais escuro no hover */
+}
+
+/* Ícones */
+.icons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icons-container i {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.icons-container i:hover {
+  color: #FFF2FF; /* Alteração de cor no hover */
+}
+
+
+
+/* Área Principal */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Lista de Produtos */
+.product-list {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+#products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--card-shadow);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.product p {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.product button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Formulário */
+.add-product {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form button {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Estilo para inputs quando estão em foco */
+form input:focus, form button:focus, .search-input:focus {
+  outline: none; /* Remove o contorno padrão */
+  border-color: var(--primary-color); /* Muda a cor da borda */
+ 
+  background-color: #f9f9ff; /* Cor de fundo suave */
+}
+
+/* Exemplo adicional para textarea (se necessário) */
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+  background-color: #f9f9ff;
+}
+
+
+
+
+
+/* Rodapé */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem 0;
+}
