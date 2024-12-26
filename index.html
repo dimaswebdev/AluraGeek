@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles/style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="./img/favicon-dimas.png">
-
 </head>
 <body>
   <!-- Cabeçalho -->
@@ -30,23 +29,29 @@
       
       <!-- Ícones -->
       <div class="icons-container">
-        <i class="fas fa-heart" title="Lista de Desejos"></i>
-        <i class="fas fa-shopping-cart" title="Carrinho"></i>
+        <!-- Lista de Desejos -->
+        <div class="icon-item">
+          <i class="far fa-heart"></i>
+          <span>Lista de Desejos</span>
+        </div>
+        <!-- Entrar -->
+        <div class="icon-item">
+          <i class="far fa-user"></i>
+          <span>Entrar</span>
+          <i class="fas fa-caret-down"></i>
+        </div>
+        <!-- Carrinho -->
+        <div class="icon-item">
+          <i class="fas fa-shopping-cart"></i>
+          <div class="cart-badge">0</div>
+          <span>Carrinho</span>
+        </div>
       </div>
     </div>
   </header>
-  
 
   <!-- Conteúdo Principal -->
-  <main>
-    <!-- Lista de Produtos -->
-    <section class="product-list">
-      <h2>Produtos</h2>
-      <div id="products-container">
-        <!-- Os produtos serão carregados dinamicamente aqui -->
-      </div>
-    </section>
-
+  <main class="main-container">
     <!-- Formulário de Adicionar Produto -->
     <section class="add-product">
       <h2>Adicionar Produto</h2>
@@ -56,6 +61,14 @@
         <input type="url" id="product-image" placeholder="URL da Imagem" required>
         <button type="submit">Adicionar</button>
       </form>
+    </section>
+
+    <!-- Lista de Produtos -->
+    <section class="product-list">
+      <h2>Produtos</h2>
+      <div id="products-container">
+        <!-- Os produtos serão carregados dinamicamente aqui -->
+      </div>
     </section>
   </main>
 
