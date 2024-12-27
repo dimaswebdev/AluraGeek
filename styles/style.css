@@ -10,13 +10,25 @@
 }
 
 /* Estilos Globais */
-body {
+html, body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color:  #f9f9ff;
+  overflow-y: hidden; /* Remove o scroll vertical */
+  height: 100%; /* Define a altura total como 100% da viewport */
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  height: 100vh; /* Define a altura como 100% da viewport */
+  overflow: hidden; /* Garante que o conteúdo não force scroll */
 }
 
+.add-product, .product-list {
+  max-height: calc(100vh - 79px); /* Subtraia a altura do cabeçalho */
+  overflow: hidden;
+}
 h1, h2 {
   color: var(--primary-color);
 }
@@ -128,8 +140,8 @@ header {
   background: yellow;
   color: black;
   font-size: 0.7rem;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -138,28 +150,48 @@ header {
 }
 
 /* Área Principal */
-main {
-  max-width: 1200px;
-  margin: 2rem auto;
+.main-container {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 300px 1fr; /* Formulário fixo à esquerda, produtos à direita */
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: calc(100vh - 79px ); /* Altura total da viewport menos o cabeçalho e o rodapé */
+  overflow: hidden; /* Impede rolagem geral */
+}
+
+/* Formulário de Adicionar Produto */
+.add-product {
+  position: sticky;
+  top: 79px; /* Para fixar abaixo do cabeçalho */
+  background: white;
+  padding: 1rem;
+  border-radius: 0px;
+  box-shadow: 0 2px 4px var(--card-shadow);
+  height: fit-content; /* Ajusta a altura ao conteúdo */
 }
 
 /* Lista de Produtos */
 .product-list {
+  overflow-y: auto; /* Permite rolagem apenas nos produtos */
   background: white;
-  border-radius: 8px;
   padding: 1rem;
+  border-radius: 0px;
   box-shadow: 0 2px 4px var(--card-shadow);
+  margin-top: 0px; /* Distância abaixo do header */
+  height: calc(100vh - 79px - 40px); /* Altura dinâmica: viewport menos header, footer e margem */
+  margin-bottom: 0px; 
 }
 
+/* Container de Produtos */
 #products-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding-bottom: 1rem; /* Espaço extra no fim para rolagem confortável */
 }
 
+/* Produto Individual */
 .product {
   flex: 1 1 calc(33.333% - 1rem);
   max-width: calc(33.333% - 1rem);
@@ -172,6 +204,7 @@ main {
   align-items: center;
 }
 
+/* Imagem do Produto */
 .product img {
   width: 150px;
   height: 150px;
@@ -179,17 +212,20 @@ main {
   border-radius: 4px;
 }
 
+/* Nome do Produto */
 .product h3 {
   margin: 0.5rem 0;
   font-size: 1rem;
   text-align: center;
 }
 
+/* Preço do Produto */
 .product p {
   color: var(--primary-color);
   font-weight: bold;
 }
 
+/* Botão de Ação */
 .product button {
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
@@ -204,15 +240,60 @@ main {
   background-color: var(--secondary-color);
 }
 
-/* Formulário */
-.add-product {
-  position: sticky;
-  top: 10px;
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px var(--card-shadow);
+/* Produto: Hover */
+.product:hover {
+  border-color: var(--primary-color); /* Cor da borda no hover */
+  
+  background-color: #f9f9ff; /* Cor de fundo suave no hover */
+  cursor: pointer; /* Aponta que é clicável */
 }
+
+/* Produto: Clique (classe ativa) */
+.product.active {
+  border-color: var(--primary-color); /* Cor da borda no clique */
+
+  background-color: #f9f9ff; /* Cor de fundo no clique */
+}
+
+.product.selected {
+  border-color: var(--primary-color); /* Cor da borda ao selecionar */
+  background-color: #f9f9ff; /* Fundo claro para o produto selecionado */
+  
+}
+
+
+
+/* Estilo geral para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 13px; /* Largura da barra de rolagem */
+  height: 13px; /* Altura da barra de rolagem horizontal */
+}
+
+/* Cor de fundo da barra */
+::-webkit-scrollbar-track {
+  background: #F4F4F4; /* Fundo suave para o trilho */
+  border-radius: 6px; /* Deixa as bordas arredondadas */
+}
+
+/* Cor da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #8200FF; /* Cor principal */
+  border-radius: 6px; /* Bordas arredondadas */
+  border: 3px solid #F4F4F4; /* Cria um espaço ao redor */
+}
+
+/* Cor ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6900CC; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Para navegadores compatíveis com scrollbar-gutter */
+.scrollable-container {
+  scrollbar-width: thin; /* Barra mais fina em navegadores como Firefox */
+  scrollbar-color: #8200FF #F4F4F4; /* Cor da barra e trilho no Firefox */
+}
+
+
 
 form {
   display: flex;
