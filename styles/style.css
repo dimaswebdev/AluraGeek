@@ -148,6 +148,40 @@ header {
   justify-content: center;
   font-weight: bold;
 }
+/*Redes Sociais*/
+.redes {
+  list-style: none;            /* Remove pontinhos da lista */
+  display: flex;              
+  flex-direction: column;      /* Ícones empilhados na vertical */
+  gap: 20px;                   /* Espaço entre cada ícone */
+  position: fixed;             /* Fica fixo na tela */
+  top: 200px;                  /* Distância do topo (ajuste como quiser) */
+  right: 40px;                 /* Distância da direita */
+  z-index: 1000;               /* Para ficar acima de outros elementos */
+}
+
+.redes__elemento a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.redes__elemento a:hover {
+  transform: scale(1.1);
+}
+
+.redes__icone {
+  font-size: 2rem;            /* Tamanho dos ícones */
+  color: var(--primary-color);             /* Cor branca, ajuste se preferir */
+  transition: color 0.3s ease;
+}
+
+.redes__icone:hover {
+  color: var(--secondary-color);             /* Cor ao passar o mouse, ajuste se preferir */
+  transform: scale(1.2);
+}
+
 
 /* Área Principal */
 .main-container {
